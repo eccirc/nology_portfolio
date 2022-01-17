@@ -2,3 +2,11 @@
   padding: 0;
   margin: 0;
 }
+
+body {
+  background: linear-gradient(to bottom, $theme-gray, $theme-white);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
