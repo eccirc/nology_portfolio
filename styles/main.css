@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&display=swap");
+* {
+  font-family: "Sulphur Point", sans-serif;
+}
+
+.nav {
+  display: flex;
+  justify-content: end;
+}
+.nav__link {
+  padding: 1.5rem;
+  font-size: 40px;
+  text-decoration: none;
+  color: #b9c8d7;
+}
+.nav__link:hover {
+  color: #ff95c1;
+}
