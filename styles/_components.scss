@@ -1,6 +1,7 @@
 .nav {
   display: flex;
   justify-content: end;
+  border: 2px solid $theme-gray-lighter;
   &__link {
     padding: 1.5rem;
     font-size: 40px;
