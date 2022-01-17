@@ -2,13 +2,21 @@
   display: flex;
   justify-content: end;
   border-bottom: 2px solid $theme-gray-lighter;
+  padding: 1.5rem;
+
   &__link {
-    padding: 1.5rem;
-    font-size: 1.8rem;
-    text-decoration: none;
-    color: $theme-gray-light;
+    visibility: hidden;
   }
-  &__link:hover {
-    color: $theme-pink;
+
+  @media screen and(min-width: 550px) {
+    &__link {
+      padding: 1.5rem;
+      font-size: 1.8rem;
+      text-decoration: none;
+      color: $theme-gray-light;
+    }
+    &__link:hover {
+      color: $theme-pink;
+    }
   }
 }

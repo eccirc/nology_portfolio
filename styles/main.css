@@ -7,15 +7,21 @@
   display: flex;
   justify-content: end;
   border-bottom: 2px solid #c9d8e7;
+  padding: 1.5rem;
 }
 .nav__link {
-  padding: 1.5rem;
-  font-size: 1.8rem;
-  text-decoration: none;
-  color: #b9c8d7;
+  visibility: hidden;
 }
-.nav__link:hover {
-  color: #ff95c1;
+@media screen and (min-width: 550px) {
+  .nav__link {
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #b9c8d7;
+  }
+  .nav__link:hover {
+    color: #ff95c1;
+  }
 }
 
 * {
