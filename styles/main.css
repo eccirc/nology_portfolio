@@ -9,6 +9,10 @@
   border-bottom: 2px solid #c9d8e7;
   padding: 1.5rem;
 }
+.nav #menu_icon {
+  width: 48px;
+  height: 48px;
+}
 .nav__button {
   background-color: transparent;
   border: none;
@@ -28,6 +32,11 @@
   left: 0;
   height: 50vh;
   width: 100vw;
+  transform: translateY(-80vh);
+  transition: 0.5s ease-in-out;
+}
+.nav .show-menu {
+  transform: translateY(0);
 }
 .nav__link {
   padding: 1.5rem;
@@ -38,6 +47,26 @@
 .nav__link:hover {
   color: #ff95c1;
 }
+@media screen and (min-width: 550px) {
+  .nav__group {
+    background-color: transparent;
+    position: initial;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    height: 5vh;
+    transform: translateY(0);
+    width: 100vw;
+  }
+  .nav__link {
+    color: #b9c8d7;
+  }
+  .nav__button {
+    display: none;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
