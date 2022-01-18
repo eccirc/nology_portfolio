@@ -71,8 +71,46 @@
   }
 }
 
+.project {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid $theme-gray-light;
+  &__image {
+    width: 100%;
+    height: 300px;
+    background-color: $theme-gray-light;
+  }
+
+  h3 {
+    color: $theme-white;
+    background-color: $theme-gray;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &__info {
+    color: $theme-gray;
+  }
+
+  &__icons {
+    margin: 1rem 0;
+    color: $theme-pink;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+}
+
 @media screen and(min-width: 550px) {
   .nav {
     border-bottom: 2px solid $theme-gray-lighter;
+  }
+  .project {
+    flex-direction: row;
+  }
+  .project:nth-child(odd) {
+    flex-direction: row-reverse;
   }
 }

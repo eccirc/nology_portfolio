@@ -36,11 +36,18 @@ body {
 }
 
 .projects {
+  padding: 1rem;
   background-color: $theme-white;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
 }
 
 @media screen and(min-width: 550px) {
   .header {
     padding: 8rem 4rem;
+  }
+  .projects {
+    grid-template-columns: 1fr;
   }
 }
