@@ -119,15 +119,14 @@
 
 .project__image {
   width: 100%;
-  height: 300px;
+  height: auto;
   background-color: #b9c8d7;
 }
 
-.project h3 {
-  color: #f4f4f4;
-  background-color: #013a6f;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
+.project__title {
+  color: #ff95c1;
+  font-size: 2rem;
+  font-weight: normal;
 }
 
 .project__info {
@@ -135,16 +134,14 @@
 }
 
 .project__icons {
-  margin: 1rem 0;
+  margin: 1rem 1rem;
   color: #ff95c1;
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 550px) {
@@ -152,16 +149,46 @@
     border-bottom: 2px solid #c9d8e7;
   }
   .project {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    width: 100%;
+    margin: 2rem 0;
+    display: -ms-grid;
+    display: grid;
+    gap: 1rem;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 4fr 1fr;
+        grid-template-rows: 1fr 4fr 1fr;
+        grid-template-areas: "img title" "img info" "img icons";
   }
-  .project:nth-child(odd) {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+  .project__image {
+    width: 100%;
+    height: 95%;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 2;
+    grid-area: img;
+  }
+  .project__title {
+    font-size: 3rem;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: title;
+  }
+  .project__info {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: info;
+  }
+  .project__icons {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: icons;
+  }
+  .project:nth-child(even) {
+        grid-template-areas: "title img" "info img" "icons img";
   }
 }
 
@@ -209,11 +236,6 @@ body {
 .projects {
   padding: 1rem;
   background-color: #f4f4f4;
-  display: -ms-grid;
-  display: grid;
-  gap: 1rem;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
 }
 
 @media screen and (min-width: 550px) {
@@ -221,8 +243,13 @@ body {
     padding: 8rem 4rem;
   }
   .projects {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    padding: 4rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .projects {
+    padding: 10rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

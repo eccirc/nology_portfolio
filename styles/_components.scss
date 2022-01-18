@@ -78,15 +78,14 @@
   border-bottom: 2px solid $theme-gray-light;
   &__image {
     width: 100%;
-    height: 300px;
+    height: auto;
     background-color: $theme-gray-light;
   }
 
-  h3 {
-    color: $theme-white;
-    background-color: $theme-gray;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
+  &__title {
+    color: $theme-pink;
+    font-size: 2rem;
+    font-weight: normal;
   }
 
   &__info {
@@ -94,12 +93,10 @@
   }
 
   &__icons {
-    margin: 1rem 0;
+    margin: 1rem 1rem;
     color: $theme-pink;
-    width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2rem;
   }
 }
 
@@ -108,9 +105,38 @@
     border-bottom: 2px solid $theme-gray-lighter;
   }
   .project {
-    flex-direction: row;
+    width: 100%;
+    margin: 2rem 0;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-areas:
+      "img title"
+      "img info"
+      "img icons";
+
+    &__image {
+      width: 100%;
+      height: 95%;
+      grid-area: img;
+    }
+    &__title {
+      font-size: 3rem;
+      grid-area: title;
+    }
+    &__info {
+      grid-area: info;
+    }
+    &__icons {
+      justify-content: space-evenly;
+      grid-area: icons;
+    }
   }
-  .project:nth-child(odd) {
-    flex-direction: row-reverse;
+  .project:nth-child(even) {
+    grid-template-areas:
+      "title img"
+      "info img"
+      "icons img";
   }
 }
