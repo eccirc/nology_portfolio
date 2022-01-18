@@ -6,12 +6,13 @@
 body {
   width: 100vw;
   height: auto;
-  background-color: $theme-gray;
+  background-color: $theme-white;
+  overflow-x: hidden;
 }
 
 .header {
   background: linear-gradient(to bottom, $theme-gray, $theme-white);
-  background-repeat: no-repeat;
+
   background-size: cover;
   height: 100vh;
   padding: 5rem 2rem;
@@ -36,8 +37,11 @@ body {
 }
 
 .projects {
-  padding: 1rem;
-  background-color: $theme-white;
+  width: 90%;
+  margin: auto;
+  padding-top: 4rem;
+  border-top: 2px solid $theme-gray-light;
+  border-bottom: 2px solid $theme-gray-light;
 }
 
 @media screen and(min-width: 550px) {
@@ -51,6 +55,6 @@ body {
 
 @media screen and(min-width: 1400px) {
   .projects {
-    padding: 10rem;
+    width: 75%;
   }
 }

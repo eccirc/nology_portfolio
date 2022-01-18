@@ -106,7 +106,7 @@
 }
 
 .project {
-  margin: 1rem 0;
+  margin: 6rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -131,6 +131,7 @@
 
 .project__info {
   color: #013a6f;
+  font-size: 1rem;
 }
 
 .project__icons {
@@ -147,7 +148,7 @@
           align-items: center;
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 820px) {
   .nav {
     border-bottom: 2px solid #c9d8e7;
   }
@@ -165,7 +166,9 @@
   }
   .project__image {
     width: 100%;
-    height: 95%;
+    height: 90%;
+    -o-object-fit: cover;
+       object-fit: cover;
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
     -ms-grid-column: 2;
@@ -181,6 +184,7 @@
     -ms-grid-row: 2;
     -ms-grid-column: 1;
     grid-area: info;
+    font-size: 1.5rem;
   }
   .project__icons {
     -ms-grid-row: 3;
@@ -200,13 +204,13 @@
 body {
   width: 100vw;
   height: auto;
-  background-color: #013a6f;
+  background-color: #f4f4f4;
+  overflow-x: hidden;
 }
 
 .header {
   background: -webkit-gradient(linear, left top, left bottom, from(#013a6f), to(#f4f4f4));
   background: linear-gradient(to bottom, #013a6f, #f4f4f4);
-  background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
   padding: 5rem 2rem;
@@ -234,8 +238,11 @@ body {
 }
 
 .projects {
-  padding: 1rem;
-  background-color: #f4f4f4;
+  width: 90%;
+  margin: auto;
+  padding-top: 4rem;
+  border-top: 2px solid #b9c8d7;
+  border-bottom: 2px solid #b9c8d7;
 }
 
 @media screen and (min-width: 550px) {
@@ -249,7 +256,7 @@ body {
 
 @media screen and (min-width: 1400px) {
   .projects {
-    padding: 10rem;
+    width: 75%;
   }
 }
 /*# sourceMappingURL=main.css.map */
