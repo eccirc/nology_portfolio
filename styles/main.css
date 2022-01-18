@@ -142,6 +142,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (min-width: 550px) {
@@ -156,8 +159,8 @@
     gap: 1rem;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 1fr 4fr 1fr;
-        grid-template-rows: 1fr 4fr 1fr;
+    -ms-grid-rows: 1fr 3fr 1fr;
+        grid-template-rows: 1fr 3fr 1fr;
         grid-template-areas: "img title" "img info" "img icons";
   }
   .project__image {
@@ -180,9 +183,6 @@
     grid-area: info;
   }
   .project__icons {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     grid-area: icons;
