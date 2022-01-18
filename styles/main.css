@@ -127,12 +127,13 @@ body {
 
 .header__title {
   font-size: 4rem;
+  font-weight: 300;
   color: #ff95c1;
 }
 
 .header__sub {
   color: #b9c8d7;
-  font-weight: normal;
+  font-weight: 300;
   font-size: 2rem;
 }
 /*# sourceMappingURL=main.css.map */

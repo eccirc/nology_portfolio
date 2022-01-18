@@ -17,11 +17,12 @@ body {
   padding: 2rem;
   &__title {
     font-size: 4rem;
+    font-weight: 300;
     color: $theme-pink;
   }
   &__sub {
     color: $theme-gray-light;
-    font-weight: normal;
+    font-weight: 300;
     font-size: 2rem;
   }
 }
