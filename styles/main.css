@@ -89,7 +89,6 @@
     height: 5vh;
     -webkit-transform: translateY(0);
             transform: translateY(0);
-    width: 100vw;
   }
   .nav__link {
     color: #b9c8d7;
@@ -111,17 +110,17 @@
 }
 
 body {
+  width: 100vw;
+  height: auto;
+  background-color: #013a6f;
+}
+
+.header {
   background: -webkit-gradient(linear, left top, left bottom, from(#013a6f), to(#f4f4f4));
   background: linear-gradient(to bottom, #013a6f, #f4f4f4);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;
   height: 100vh;
-}
-
-.header {
-  height: 100vh;
-  width: 90vw;
   padding: 2rem;
 }
 
@@ -135,5 +134,20 @@ body {
   color: #b9c8d7;
   font-weight: 300;
   font-size: 2rem;
+}
+
+@media screen and (min-width: 550px) {
+  .header__title {
+    font-size: 5rem;
+  }
+  .header__sub {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .header {
+    padding: 4rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
