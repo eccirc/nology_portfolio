@@ -1,7 +1,7 @@
 .nav {
   display: flex;
   justify-content: end;
-  border-bottom: 2px solid $theme-gray-lighter;
+  // border-bottom: 2px solid $theme-gray-lighter;
   padding: 1.5rem;
 
   #menu_icon {
@@ -65,5 +65,11 @@
     &__button {
       display: none;
     }
+  }
+}
+
+@media screen and(min-width: 550px) {
+  .nav {
+    border-bottom: 2px solid $theme-gray-lighter;
   }
 }
