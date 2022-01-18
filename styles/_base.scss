@@ -14,7 +14,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  padding: 2rem;
+  padding: 5rem 2rem;
   &__title {
     font-size: 4rem;
     font-weight: 300;
@@ -34,8 +34,13 @@ body {
     }
   }
 }
+
+.projects {
+  background-color: $theme-white;
+}
+
 @media screen and(min-width: 550px) {
   .header {
-    padding: 4rem;
+    padding: 8rem 4rem;
   }
 }
