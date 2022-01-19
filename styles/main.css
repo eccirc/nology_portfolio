@@ -54,6 +54,7 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #27292c;
 }
 
 .nav #menu_icon {
@@ -74,7 +75,7 @@ p {
 
 .nav__group {
   border: 2px solid #b9c8d7;
-  background-color: #c9d8e7;
+  background-color: #27292c;
   position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -106,7 +107,7 @@ p {
 .nav__link {
   padding: 1.5rem;
   text-decoration: none;
-  color: #013a6f;
+  color: #b2cce6;
 }
 
 .nav__link:hover {
@@ -136,7 +137,7 @@ p {
             transform: translateY(0);
   }
   .nav__link {
-    color: #013a6f;
+    color: #b2cce6;
   }
   .nav__button {
     display: none;
@@ -167,7 +168,7 @@ p {
 }
 
 .project__info {
-  color: #013a6f;
+  color: #b2cce6;
 }
 
 .project__icons {
@@ -247,7 +248,7 @@ h3,
 p,
 a,
 button {
-  color: #013a6f;
+  color: #b2cce6;
 }
 
 img {
@@ -257,7 +258,7 @@ img {
 body {
   width: 100vw;
   height: auto;
-  background-color: #c9d8e7;
+  background-color: #27292c;
   overflow-x: hidden;
 }
 
