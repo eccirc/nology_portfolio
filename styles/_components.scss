@@ -5,12 +5,14 @@
   display: flex;
   justify-content: end;
   align-items: center;
-  padding: 0;
-  background-color: $theme-gray-lighter;
-  width: 48px;
-  height: 48px;
+
+  #menu_icon {
+    width: 48px;
+    height: 48px;
+  }
 
   &__button {
+    background-color: transparent;
     border: none;
     margin: 20px;
     cursor: pointer;
@@ -21,13 +23,14 @@
   }
 
   &__group {
+    border: 2px solid $theme-gray-light;
     background-color: $theme-gray-lighter;
     position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    top: 100px;
+    top: 80px;
     left: 0;
     height: 50vh;
     width: 100vw;
@@ -41,6 +44,7 @@
   &__link {
     padding: 1.5rem;
     text-decoration: none;
+    color: $theme-gray;
   }
   &__link:hover {
     color: $theme-pink;
@@ -48,6 +52,8 @@
 
   @media screen and(min-width: 550px) {
     &__group {
+      background-color: transparent;
+      border: none;
       position: initial;
       display: flex;
       flex-direction: row;
@@ -55,6 +61,9 @@
       justify-content: end;
       height: 5vh;
       transform: translateY(0);
+    }
+    &__link {
+      color: $theme-gray;
     }
     &__button {
       display: none;
@@ -66,11 +75,11 @@
   margin: 6rem 0;
   display: flex;
   flex-direction: column;
-  border-bottom: 2px solid $theme-gray;
+  border-bottom: 2px solid $theme-gray-light;
   &__image {
     width: 100%;
     height: auto;
-    background-color: $theme-gray-lighter;
+    background-color: $theme-gray-light;
   }
 
   &__title {
@@ -95,7 +104,7 @@
 
 @media screen and(min-width: 820px) {
   .nav {
-    border-bottom: 2px solid $theme-gray;
+    border-bottom: 2px solid $theme-gray-light;
   }
   .project {
     width: 100%;

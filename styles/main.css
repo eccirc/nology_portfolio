@@ -54,13 +54,15 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0;
-  background-color: #c9d8e7;
+}
+
+.nav #menu_icon {
   width: 48px;
   height: 48px;
 }
 
 .nav__button {
+  background-color: transparent;
   border: none;
   margin: 20px;
   cursor: pointer;
@@ -71,6 +73,7 @@ p {
 }
 
 .nav__group {
+  border: 2px solid #b9c8d7;
   background-color: #c9d8e7;
   position: fixed;
   display: -webkit-box;
@@ -85,7 +88,7 @@ p {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  top: 100px;
+  top: 80px;
   left: 0;
   height: 50vh;
   width: 100vw;
@@ -103,6 +106,7 @@ p {
 .nav__link {
   padding: 1.5rem;
   text-decoration: none;
+  color: #013a6f;
 }
 
 .nav__link:hover {
@@ -111,6 +115,8 @@ p {
 
 @media screen and (min-width: 550px) {
   .nav__group {
+    background-color: transparent;
+    border: none;
     position: initial;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -129,6 +135,9 @@ p {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
+  .nav__link {
+    color: #013a6f;
+  }
   .nav__button {
     display: none;
   }
@@ -143,13 +152,13 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border-bottom: 2px solid #013a6f;
+  border-bottom: 2px solid #b9c8d7;
 }
 
 .project__image {
   width: 100%;
   height: auto;
-  background-color: #c9d8e7;
+  background-color: #b9c8d7;
 }
 
 .project__title {
@@ -177,7 +186,7 @@ p {
 
 @media screen and (min-width: 820px) {
   .nav {
-    border-bottom: 2px solid #013a6f;
+    border-bottom: 2px solid #b9c8d7;
   }
   .project {
     width: 100%;
@@ -255,7 +264,16 @@ body {
 .header {
   background-size: cover;
   height: 70vh;
-  padding: 5rem 2rem;
+  width: 100%;
+  margin: auto;
+  padding: 8rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .header__title {
@@ -266,7 +284,6 @@ body {
   font-weight: 300;
 }
 
-.header,
 .projects,
 .about,
 .contact {
@@ -326,6 +343,7 @@ body {
 @media screen and (min-width: 550px) {
   .header {
     padding: 8rem 4rem;
+    width: 50%;
   }
   .projects {
     padding: 8rem 0;
@@ -344,7 +362,6 @@ body {
 }
 
 @media screen and (min-width: 1400px) {
-  .header,
   .projects,
   .about,
   .contact {

@@ -33,7 +33,11 @@ body {
 .header {
   background-size: cover;
   height: 70vh;
-  padding: 5rem 2rem;
+  width: 100%;
+  margin: auto;
+  padding: 8rem 2rem;
+  display: flex;
+  flex-direction: column;
   &__title {
     font-weight: 300;
   }
@@ -42,7 +46,6 @@ body {
   }
 }
 
-.header,
 .projects,
 .about,
 .contact {
@@ -81,6 +84,7 @@ body {
 @media screen and(min-width: 550px) {
   .header {
     padding: 8rem 4rem;
+    width: 50%;
   }
   .projects {
     padding: 8rem 0;
@@ -95,7 +99,6 @@ body {
 }
 
 @media screen and(min-width: 1400px) {
-  .header,
   .projects,
   .about,
   .contact {
