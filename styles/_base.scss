@@ -1,41 +1,48 @@
+/* _base.scss
+  Describes global/ layout styles
+*/
+
 * {
   padding: 0;
   margin: 0;
 }
 
+h1,
+h2 {
+  color: $theme-pink;
+}
+
+h3,
+p,
+a,
+button {
+  color: $theme-gray;
+}
+
+img {
+  border-radius: 5px;
+}
+
 body {
   width: 100vw;
   height: auto;
-  background-color: $theme-white;
+  background-color: $theme-gray-lighter;
   overflow-x: hidden;
 }
 
 .header {
-  background: linear-gradient(to bottom, $theme-gray, $theme-white);
-
   background-size: cover;
   height: 70vh;
   padding: 5rem 2rem;
   &__title {
-    font-size: 4rem;
     font-weight: 300;
-    color: $theme-pink;
   }
   &__sub {
-    color: $theme-gray-light;
     font-weight: 300;
-    font-size: 2rem;
-  }
-  @media screen and(min-width: 550px) {
-    &__title {
-      font-size: 5rem;
-    }
-    &__sub {
-      font-size: 3rem;
-    }
   }
 }
 
+.header,
 .projects,
 .about,
 .contact {
@@ -45,7 +52,7 @@ body {
 }
 
 .about {
-  height: 100vh;
+  height: 60vh;
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -53,12 +60,10 @@ body {
   align-items: center;
   &__image {
     background-color: $theme-gray-light;
-    width: 100%;
-    height: 50%;
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
     margin-bottom: 2rem;
-  }
-  &__info {
-    font-size: 1rem;
   }
 }
 
@@ -78,15 +83,22 @@ body {
     padding: 8rem 4rem;
   }
   .projects {
-    padding: 4rem;
+    padding: 8rem 0;
+  }
+  .about {
+    padding-top: 8rem;
+    display: grid;
+    gap: 1rem;
+    align-items: flex-start;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 @media screen and(min-width: 1400px) {
+  .header,
   .projects,
   .about,
   .contact {
     width: 75%;
-    padding-top: 4rem;
   }
 }
