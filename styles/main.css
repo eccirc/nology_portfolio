@@ -1,6 +1,23 @@
+/*
+_typography.scss
+
+For setting the fonts, colours and sizes of all document text
+*/
 @import url("https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&display=swap");
 * {
   font-family: "Sulphur Point", sans-serif;
+}
+
+h1,
+h2 {
+  color: #ff95c1;
+}
+
+h3,
+p,
+a,
+button {
+  color: #b2cce6;
 }
 
 h1 {
@@ -15,7 +32,7 @@ h2 {
   font-size: 1.5rem;
 }
 
-a {
+button {
   font-size: 1.8rem;
 }
 
@@ -69,10 +86,6 @@ p {
   cursor: pointer;
 }
 
-.nav__link {
-  visibility: visible;
-}
-
 .nav__group {
   border: 2px solid #b9c8d7;
   background-color: #27292c;
@@ -105,7 +118,11 @@ p {
 }
 
 .nav__link {
-  padding: 1.5rem;
+  background-color: transparent;
+  border: none;
+  height: 8vh;
+  width: 100%;
+  padding: 0 1.5rem;
   text-decoration: none;
   color: #b2cce6;
 }
@@ -137,7 +154,7 @@ p {
             transform: translateY(0);
   }
   .nav__link {
-    color: #b2cce6;
+    width: auto;
   }
   .nav__button {
     display: none;
@@ -183,6 +200,11 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.nav-selected {
+  background-color: #ff95c1;
+  color: #27292c;
 }
 
 @media screen and (min-width: 820px) {
@@ -237,18 +259,6 @@ p {
 * {
   padding: 0;
   margin: 0;
-}
-
-h1,
-h2 {
-  color: #ff95c1;
-}
-
-h3,
-p,
-a,
-button {
-  color: #b2cce6;
 }
 
 img {

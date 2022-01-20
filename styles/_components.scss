@@ -19,10 +19,6 @@
     cursor: pointer;
   }
 
-  &__link {
-    visibility: visible;
-  }
-
   &__group {
     border: 2px solid $theme-gray-light;
     background-color: $theme-gray-lighter;
@@ -43,7 +39,11 @@
   }
 
   &__link {
-    padding: 1.5rem;
+    background-color: transparent;
+    border: none;
+    height: 8vh;
+    width: 100%;
+    padding: 0 1.5rem;
     text-decoration: none;
     color: $theme-gray;
   }
@@ -64,8 +64,9 @@
       transform: translateY(0);
     }
     &__link {
-      color: $theme-gray;
+      width: auto;
     }
+
     &__button {
       display: none;
     }
@@ -101,7 +102,12 @@
   }
 }
 
-//Target screen size 800px and up
+.nav-selected {
+  background-color: $theme-pink;
+  color: $theme-gray-lighter;
+}
+
+//Target screen size 820px and up
 
 @media screen and(min-width: 820px) {
   .nav {
