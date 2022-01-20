@@ -20,6 +20,7 @@ h2 {
 h3,
 p,
 a,
+span,
 button {
   color: $theme-gray;
 }
@@ -38,7 +39,8 @@ button {
   font-size: 1.8rem;
 }
 
-p {
+p,
+span {
   font-size: 1.1rem;
 }
 
@@ -58,7 +60,8 @@ p {
     font-size: 2rem;
   }
 
-  p {
+  p,
+  span {
     font-size: 1.8rem;
   }
 }

@@ -34,10 +34,8 @@ window.onload = () => {
     for (let i = 0; i < navButtons.length; i++) {
       if (navButtons[i].innerHTML === currentElement) {
         navButtons[i].classList.add("nav-selected");
-        console.log("added");
       } else {
         navButtons[i].classList.remove("nav-selected");
-        console.log("removed");
       }
     }
   };

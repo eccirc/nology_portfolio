@@ -88,6 +88,15 @@
     color: $theme-pink;
     font-weight: normal;
   }
+  &__sub {
+    span {
+      border-bottom: 2px solid;
+    }
+    .icons__tech {
+      padding: 1rem 0;
+      color: $theme-pink;
+    }
+  }
 
   &__info {
     color: $theme-gray;
@@ -106,6 +115,9 @@
   background-color: $theme-pink;
   color: $theme-gray-lighter;
 }
+.nav-selected:hover {
+  color: $theme-gray-light;
+}
 
 //Target screen size 820px and up
 
@@ -119,11 +131,11 @@
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 1fr 3fr;
     grid-template-areas:
       "img title"
-      "img info"
-      "img icons";
+      "img sub"
+      "img info";
 
     &__image {
       width: 100%;
@@ -134,11 +146,11 @@
     &__title {
       grid-area: title;
     }
+    &__sub {
+      grid-area: sub;
+    }
     &__info {
       grid-area: info;
-    }
-    &__icons {
-      grid-area: icons;
     }
   }
   .project:nth-child(even) {
