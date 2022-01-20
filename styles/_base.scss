@@ -79,6 +79,9 @@ body {
   &__details {
     margin: 2rem;
   }
+  &__icons {
+    color: $theme-pink;
+  }
 }
 
 @media screen and(min-width: 550px) {
