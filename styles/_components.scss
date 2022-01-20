@@ -5,7 +5,7 @@
   display: flex;
   justify-content: end;
   align-items: center;
-  background-color: $theme-gray-lighter;
+  background-color: $theme-gray-dark;
 
   #menu_icon {
     width: 48px;
@@ -21,13 +21,13 @@
 
   &__group {
     border: 2px solid $theme-gray-light;
-    background-color: $theme-gray-lighter;
+    background-color: $theme-gray-dark;
     position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    top: 80px;
+    top: 70px;
     left: 0;
     height: 75vh;
     width: 99vw;
@@ -87,33 +87,31 @@
   &__title {
     color: $theme-pink;
     font-weight: normal;
+    margin: 1rem 0;
+    i {
+      color: $theme-cyan;
+    }
   }
   &__sub {
     span {
-      border-bottom: 2px solid;
+      color: $theme-pink;
+      border-bottom: 1px solid;
     }
     .icons__tech {
       padding: 1rem 0;
-      color: $theme-pink;
+      color: $theme-cyan;
     }
   }
 
   &__info {
     color: $theme-gray;
-  }
-
-  &__icons {
-    margin: 1rem 1rem;
-    color: $theme-pink;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin-bottom: 2rem;
   }
 }
 
 .nav-selected {
   background-color: $theme-pink;
-  color: $theme-gray-lighter;
+  color: $theme-gray-dark;
 }
 .nav-selected:hover {
   color: $theme-gray-light;
@@ -156,7 +154,7 @@
   .project:nth-child(even) {
     grid-template-areas:
       "title img"
-      "info img"
-      "icons img";
+      "sub img"
+      "info img";
   }
 }

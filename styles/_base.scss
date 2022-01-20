@@ -13,9 +13,20 @@ img {
 
 body {
   width: 100vw;
-  height: auto;
-  background-color: $theme-gray-lighter;
+  height: 100vh;
+  background-color: $theme-gray-dark;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   overflow-x: hidden;
+  transition: all 0.5s ease;
+}
+
+.body-blue {
+  background-color: $theme-blue;
+}
+
+canvas {
+  position: fixed !important;
 }
 
 .header {
@@ -50,11 +61,12 @@ body {
   justify-content: center;
   align-items: center;
   &__image {
-    background-color: $theme-gray-light;
+    z-index: -1;
     width: 80%;
     height: 80%;
     object-fit: cover;
     margin-bottom: 2rem;
+    filter: grayscale(100%);
   }
 }
 
@@ -68,7 +80,7 @@ body {
     margin: 2rem;
   }
   &__icons {
-    color: $theme-pink;
+    color: $theme-cyan;
   }
 }
 

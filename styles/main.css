@@ -4,12 +4,14 @@ _typography.scss
 For setting the fonts, colours and sizes of all document text
 */
 @import url("https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gudea:ital,wght@0,400;0,700;1,400&display=swap");
 * {
   font-family: "Sulphur Point", sans-serif;
 }
 
 h1,
 h2 {
+  font-family: "Gudea", sans-serif;
   color: #ff95c1;
 }
 
@@ -25,11 +27,11 @@ h1 {
   font-size: 3rem;
 }
 
-h3 {
+h2 {
   font-size: 2rem;
 }
 
-h2 {
+h3 {
   font-size: 1.5rem;
 }
 
@@ -44,12 +46,12 @@ span {
 
 @media screen and (min-width: 1800px) {
   h1 {
-    font-size: 4rem;
-  }
-  h3 {
-    font-size: 3rem;
+    font-size: 5rem;
   }
   h2 {
+    font-size: 3rem;
+  }
+  h3 {
     font-size: 2.2rem;
   }
   a {
@@ -105,7 +107,7 @@ span {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  top: 80px;
+  top: 70px;
   left: 0;
   height: 75vh;
   width: 99vw;
@@ -185,33 +187,26 @@ span {
 .project__title {
   color: #ff95c1;
   font-weight: normal;
+  margin: 1rem 0;
+}
+
+.project__title i {
+  color: #00c8c8;
 }
 
 .project__sub span {
-  border-bottom: 2px solid;
+  color: #ff95c1;
+  border-bottom: 1px solid;
 }
 
 .project__sub .icons__tech {
   padding: 1rem 0;
-  color: #ff95c1;
+  color: #00c8c8;
 }
 
 .project__info {
   color: #b2cce6;
-}
-
-.project__icons {
-  margin: 1rem 1rem;
-  color: #ff95c1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin-bottom: 2rem;
 }
 
 .nav-selected {
@@ -256,16 +251,16 @@ span {
   }
   .project__sub {
     -ms-grid-row: 2;
-    -ms-grid-column: 2;
+    -ms-grid-column: 1;
     grid-area: sub;
   }
   .project__info {
-    -ms-grid-row: 2;
+    -ms-grid-row: 3;
     -ms-grid-column: 1;
     grid-area: info;
   }
   .project:nth-child(even) {
-        grid-template-areas: "title img" "info img" "icons img";
+        grid-template-areas: "title img" "sub img" "info img";
   }
 }
 
@@ -283,9 +278,21 @@ img {
 
 body {
   width: 100vw;
-  height: auto;
+  height: 100vh;
   background-color: #27292c;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   overflow-x: hidden;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.body-blue {
+  background-color: #3e5475;
+}
+
+canvas {
+  position: fixed !important;
 }
 
 .header {
@@ -338,12 +345,14 @@ body {
 }
 
 .about__image {
-  background-color: #b9c8d7;
+  z-index: -1;
   width: 80%;
   height: 80%;
   -o-object-fit: cover;
      object-fit: cover;
   margin-bottom: 2rem;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 .contact {
@@ -368,7 +377,7 @@ body {
 }
 
 .contact__icons {
-  color: #ff95c1;
+  color: #00c8c8;
 }
 
 @media screen and (min-width: 550px) {
