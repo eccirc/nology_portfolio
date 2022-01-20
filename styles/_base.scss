@@ -1,28 +1,98 @@
+/* _base.scss
+  Describes global/ layout styles
+*/
+
 * {
   padding: 0;
   margin: 0;
 }
 
+img {
+  border-radius: 5px;
+}
+
 body {
-  background: linear-gradient(to bottom, $theme-gray, $theme-white);
-  background-repeat: no-repeat;
-  background-size: cover;
   width: 100vw;
-  height: 100vh;
+  height: auto;
+  background-color: $theme-gray-lighter;
+  overflow-x: hidden;
 }
 
 .header {
-  height: 100vh;
-  width: 90vw;
-  padding: 2rem;
+  background-size: cover;
+  height: 70vh;
+  width: 100%;
+  margin: auto;
+  padding: 8rem 2rem;
+  display: flex;
+  flex-direction: column;
   &__title {
-    font-size: 4rem;
     font-weight: 300;
-    color: $theme-pink;
   }
   &__sub {
-    color: $theme-gray-light;
     font-weight: 300;
-    font-size: 2rem;
+  }
+}
+
+.projects,
+.about,
+.contact {
+  width: 90%;
+  margin: auto;
+  padding-top: 4rem;
+}
+
+.about {
+  height: 60vh;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__image {
+    background-color: $theme-gray-light;
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    margin-bottom: 2rem;
+  }
+}
+
+.contact {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  &__details {
+    margin: 2rem;
+  }
+  &__icons {
+    color: $theme-pink;
+  }
+}
+
+@media screen and(min-width: 550px) {
+  .header {
+    padding: 8rem 4rem;
+    width: 50%;
+  }
+  .projects {
+    padding: 8rem 0;
+  }
+  .about {
+    padding-top: 8rem;
+    display: grid;
+    gap: 1rem;
+    align-items: flex-start;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and(min-width: 1400px) {
+  .projects,
+  .about,
+  .contact {
+    width: 75%;
   }
 }
