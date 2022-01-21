@@ -1,8 +1,4 @@
-/*
-_typography.scss
-
-For setting the fonts, colours and sizes of all document text
-*/
+// _typography.scss - for setting the fonts, colours and sizes of all document text
 
 @import url("https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&display=swap");
 
@@ -19,6 +15,7 @@ h1,
 h2 {
   font-family: $theme-font-heading;
   color: $theme-pink;
+  font-weight: 300;
 }
 
 h3,

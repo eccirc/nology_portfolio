@@ -1,8 +1,3 @@
-/*
-_typography.scss
-
-For setting the fonts, colours and sizes of all document text
-*/
 @import url("https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gudea:ital,wght@0,400;0,700;1,400&display=swap");
 * {
@@ -264,9 +259,6 @@ span {
   }
 }
 
-/* _base.scss
-  Describes global/ layout styles
-*/
 * {
   padding: 0;
   margin: 0;

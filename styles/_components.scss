@@ -1,3 +1,5 @@
+// _components.scss - styling for navbar and project components
+
 .nav {
   position: fixed;
   width: 100%;
@@ -7,16 +9,16 @@
   align-items: center;
   background-color: $theme-gray-dark;
 
-  #menu_icon {
-    width: 48px;
-    height: 48px;
-  }
-
   &__button {
     background-color: transparent;
     border: none;
     margin: 20px;
     cursor: pointer;
+
+    #menu_icon {
+      width: 48px;
+      height: 48px;
+    }
   }
 
   &__group {
@@ -50,8 +52,8 @@
   &__link:hover {
     color: $theme-pink;
   }
-
-  @media screen and(min-width: 550px) {
+  //Change nav styles at screens greater than larger tablet and up
+  @media screen and(min-width: $screen-medium) {
     &__group {
       background-color: transparent;
       border: none;
@@ -71,6 +73,15 @@
       display: none;
     }
   }
+}
+
+//un-nested styles for when nav item is selected (being watched by javascript)
+.nav-selected {
+  background-color: $theme-pink;
+  color: $theme-gray-dark;
+}
+.nav-selected:hover {
+  color: $theme-gray-light;
 }
 
 .project {
@@ -109,17 +120,7 @@
   }
 }
 
-.nav-selected {
-  background-color: $theme-pink;
-  color: $theme-gray-dark;
-}
-.nav-selected:hover {
-  color: $theme-gray-light;
-}
-
-//Target screen size 820px and up
-
-@media screen and(min-width: 820px) {
+@media screen and(min-width: $screen-medium) {
   .nav {
     border-bottom: 2px solid $theme-gray-light;
   }
