@@ -1,8 +1,11 @@
 .nav {
+  position: fixed;
+  width: 100%;
+  height: 8vh;
   display: flex;
   justify-content: end;
-  border-bottom: 2px solid $theme-gray-lighter;
-  padding: 1.5rem;
+  align-items: center;
+  background-color: $theme-gray-lighter;
 
   #menu_icon {
     width: 48px;
@@ -12,25 +15,23 @@
   &__button {
     background-color: transparent;
     border: none;
+    margin: 20px;
     cursor: pointer;
   }
 
-  &__link {
-    visibility: visible;
-  }
-
   &__group {
+    border: 2px solid $theme-gray-light;
     background-color: $theme-gray-lighter;
     position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    top: 120px;
+    top: 80px;
     left: 0;
-    height: 50vh;
-    width: 100vw;
-    transform: translateY(-80vh);
+    height: 75vh;
+    width: 99vw;
+    transform: translateY(-100vh);
     transition: 0.5s ease-in-out;
   }
   .show-menu {
@@ -38,8 +39,11 @@
   }
 
   &__link {
-    padding: 1.5rem;
-    font-size: 1.8rem;
+    background-color: transparent;
+    border: none;
+    height: 8vh;
+    width: 100%;
+    padding: 0 1.5rem;
     text-decoration: none;
     color: $theme-gray;
   }
@@ -50,6 +54,7 @@
   @media screen and(min-width: 550px) {
     &__group {
       background-color: transparent;
+      border: none;
       position: initial;
       display: flex;
       flex-direction: row;
@@ -57,13 +62,101 @@
       justify-content: end;
       height: 5vh;
       transform: translateY(0);
-      width: 100vw;
     }
     &__link {
-      color: $theme-gray-light;
+      width: auto;
     }
+
     &__button {
       display: none;
     }
+  }
+}
+
+.project {
+  margin: 6rem 0;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid $theme-gray-light;
+  &__image {
+    width: 100%;
+    height: auto;
+    background-color: $theme-gray-light;
+  }
+
+  &__title {
+    color: $theme-pink;
+    font-weight: normal;
+  }
+  &__sub {
+    span {
+      border-bottom: 2px solid;
+    }
+    .icons__tech {
+      padding: 1rem 0;
+      color: $theme-pink;
+    }
+  }
+
+  &__info {
+    color: $theme-gray;
+  }
+
+  &__icons {
+    margin: 1rem 1rem;
+    color: $theme-pink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.nav-selected {
+  background-color: $theme-pink;
+  color: $theme-gray-lighter;
+}
+.nav-selected:hover {
+  color: $theme-gray-light;
+}
+
+//Target screen size 820px and up
+
+@media screen and(min-width: 820px) {
+  .nav {
+    border-bottom: 2px solid $theme-gray-light;
+  }
+  .project {
+    width: 100%;
+    margin: 2rem 0;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 3fr;
+    grid-template-areas:
+      "img title"
+      "img sub"
+      "img info";
+
+    &__image {
+      width: 100%;
+      height: 90%;
+      object-fit: cover;
+      grid-area: img;
+    }
+    &__title {
+      grid-area: title;
+    }
+    &__sub {
+      grid-area: sub;
+    }
+    &__info {
+      grid-area: info;
+    }
+  }
+  .project:nth-child(even) {
+    grid-template-areas:
+      "title img"
+      "info img"
+      "icons img";
   }
 }

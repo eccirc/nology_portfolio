@@ -1,7 +1,67 @@
+/*
+_typography.scss
+
+For setting the fonts, colours and sizes of all document text
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&display=swap");
 
 $theme-font-main: "Sulphur Point", sans-serif;
 
 * {
   font-family: $theme-font-main;
+}
+
+h1,
+h2 {
+  color: $theme-pink;
+}
+
+h3,
+p,
+a,
+span,
+button {
+  color: $theme-gray;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+
+button {
+  font-size: 1.8rem;
+}
+
+p,
+span {
+  font-size: 1.1rem;
+}
+
+//Biiig screens
+@media screen and (min-width: 1800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  a {
+    font-size: 2rem;
+  }
+
+  p,
+  span {
+    font-size: 1.8rem;
+  }
 }
