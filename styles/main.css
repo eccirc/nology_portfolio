@@ -370,6 +370,22 @@ canvas {
           filter: grayscale(100%);
 }
 
+.about__me a {
+  text-decoration: underline;
+}
+
+.about__stack {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem 0;
+}
+
+.about__stack a img {
+  width: 48px;
+  margin-right: 32px;
+}
+
 .contact {
   height: auto;
   margin-bottom: 200px;
@@ -394,7 +410,7 @@ canvas {
 
 .contact__icons img {
   margin: 0 20px;
-  width: 48px;
+  width: 58px;
   color: #00c8c8;
 }
 

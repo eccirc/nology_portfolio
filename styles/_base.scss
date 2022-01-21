@@ -50,6 +50,7 @@ canvas {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   &__image {
     z-index: -1;
     width: 80%;
@@ -57,6 +58,17 @@ canvas {
     object-fit: cover;
     margin-bottom: 2rem;
     filter: grayscale(100%);
+  }
+  &__me a {
+    text-decoration: underline;
+  }
+  &__stack {
+    display: flex;
+    padding: 1rem 0;
+    a img {
+      width: 48px;
+      margin-right: 32px;
+    }
   }
 }
 
@@ -73,7 +85,7 @@ canvas {
   &__icons {
     img {
       margin: 0 20px;
-      width: 48px;
+      width: 58px;
       color: $theme-cyan;
     }
   }
