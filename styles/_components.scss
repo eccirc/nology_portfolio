@@ -53,7 +53,7 @@
     color: $theme-pink;
   }
   //Change nav styles at screens greater than larger tablet and up
-  @media screen and(min-width: $screen-medium) {
+  @media screen and(min-width: $screen-large) {
     &__group {
       background-color: transparent;
       border: none;
@@ -110,7 +110,15 @@
     }
     .icons__tech {
       padding: 1rem 0;
-      color: $theme-cyan;
+      img {
+        margin: 0 10px;
+        width: 38px;
+      }
+      @media screen and (min-width: $screen-medium) {
+        img {
+          width: 48px;
+        }
+      }
     }
   }
 
@@ -120,7 +128,7 @@
   }
 }
 
-@media screen and(min-width: $screen-medium) {
+@media screen and(min-width: $screen-large) {
   .nav {
     border-bottom: 2px solid $theme-gray-light;
   }
@@ -144,6 +152,13 @@
     }
     &__title {
       grid-area: title;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+
+      i {
+        margin-left: 20px;
+      }
     }
     &__sub {
       grid-area: sub;

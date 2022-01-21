@@ -1,3 +1,13 @@
+@charset "UTF-8";
+/*
+www.freecodecamp.org: 
+    320px — 480px: Mobile devices.
+    481px — 768px: iPads, Tablets.
+    769px — 1024px: Small screens, laptops.
+    1025px — 1200px: Desktops, large screens.
+    1201px and more — Extra large screens, TV.
+
+*/
 @import url("https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gudea:ital,wght@0,400;0,700;1,400&display=swap");
 * {
@@ -8,6 +18,7 @@ h1,
 h2 {
   font-family: "Gudea", sans-serif;
   color: #ff95c1;
+  font-weight: 300;
 }
 
 h3,
@@ -39,7 +50,7 @@ span {
   font-size: 1.1rem;
 }
 
-@media screen and (min-width: 1800px) {
+@media screen and (min-width: 481px) {
   h1 {
     font-size: 5rem;
   }
@@ -74,16 +85,16 @@ span {
   background-color: #27292c;
 }
 
-.nav #menu_icon {
-  width: 48px;
-  height: 48px;
-}
-
 .nav__button {
   background-color: transparent;
   border: none;
   margin: 20px;
   cursor: pointer;
+}
+
+.nav__button #menu_icon {
+  width: 48px;
+  height: 48px;
 }
 
 .nav__group {
@@ -131,7 +142,7 @@ span {
   color: #ff95c1;
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 769px) {
   .nav__group {
     background-color: transparent;
     border: none;
@@ -159,6 +170,15 @@ span {
   .nav__button {
     display: none;
   }
+}
+
+.nav-selected {
+  background-color: #ff95c1;
+  color: #27292c;
+}
+
+.nav-selected:hover {
+  color: #b9c8d7;
 }
 
 .project {
@@ -196,7 +216,17 @@ span {
 
 .project__sub .icons__tech {
   padding: 1rem 0;
-  color: #00c8c8;
+}
+
+.project__sub .icons__tech img {
+  margin: 0 10px;
+  width: 38px;
+}
+
+@media screen and (min-width: 481px) {
+  .project__sub .icons__tech img {
+    width: 48px;
+  }
 }
 
 .project__info {
@@ -204,16 +234,7 @@ span {
   margin-bottom: 2rem;
 }
 
-.nav-selected {
-  background-color: #ff95c1;
-  color: #27292c;
-}
-
-.nav-selected:hover {
-  color: #b9c8d7;
-}
-
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 769px) {
   .nav {
     border-bottom: 2px solid #b9c8d7;
   }
@@ -243,6 +264,18 @@ span {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: title;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .project__title i {
+    margin-left: 20px;
   }
   .project__sub {
     -ms-grid-row: 2;
@@ -268,6 +301,10 @@ img {
   border-radius: 5px;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   width: 100vw;
   height: 100vh;
@@ -275,12 +312,6 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   overflow-x: hidden;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-.body-blue {
-  background-color: #3e5475;
 }
 
 canvas {
@@ -302,14 +333,6 @@ canvas {
           flex-direction: column;
 }
 
-.header__title {
-  font-weight: 300;
-}
-
-.header__sub {
-  font-weight: 300;
-}
-
 .projects,
 .about,
 .contact {
@@ -319,7 +342,7 @@ canvas {
 }
 
 .about {
-  height: 60vh;
+  height: auto;
   width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -339,7 +362,7 @@ canvas {
 .about__image {
   z-index: -1;
   width: 80%;
-  height: 80%;
+  height: 50vh;
   -o-object-fit: cover;
      object-fit: cover;
   margin-bottom: 2rem;
@@ -348,7 +371,8 @@ canvas {
 }
 
 .contact {
-  height: 50vh;
+  height: auto;
+  margin-bottom: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -368,11 +392,13 @@ canvas {
   margin: 2rem;
 }
 
-.contact__icons {
+.contact__icons img {
+  margin: 0 20px;
+  width: 48px;
   color: #00c8c8;
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 1025px) {
   .header {
     padding: 8rem 4rem;
     width: 50%;
@@ -393,7 +419,7 @@ canvas {
   }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1201px) {
   .projects,
   .about,
   .contact {

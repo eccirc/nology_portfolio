@@ -10,7 +10,7 @@ window.onload = () => {
   const body = document.getElementById("body");
 
   //Helper function to check if element is in viewport
-  function isInViewport(el) {
+  const isInViewport = (el) => {
     const rect = el.getBoundingClientRect();
     return (
       rect.top >= 0 &&
@@ -18,7 +18,7 @@ window.onload = () => {
       rect.bottom <= window.innerHeight &&
       rect.right <= window.innerWidth
     );
-  }
+  };
 
   //Toggle for on
   let toggle = false;

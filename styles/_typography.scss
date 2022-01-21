@@ -45,8 +45,7 @@ span {
   font-size: 1.1rem;
 }
 
-//Biiig screens
-@media screen and (min-width: 1800px) {
+@media screen and (min-width: $screen-medium) {
   h1 {
     font-size: 5rem;
   }
