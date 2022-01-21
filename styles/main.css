@@ -321,12 +321,16 @@ canvas {
 .header {
   background-size: cover;
   height: 70vh;
-  width: 100%;
-  margin: auto;
-  padding: 8rem 2rem;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -338,7 +342,7 @@ canvas {
 .contact {
   width: 90%;
   margin: auto;
-  padding-top: 4rem;
+  padding-top: 8rem;
 }
 
 .about {
@@ -370,6 +374,10 @@ canvas {
           filter: grayscale(100%);
 }
 
+.about__tech_title {
+  margin: 1rem 0;
+}
+
 .about__me a {
   text-decoration: underline;
 }
@@ -378,7 +386,9 @@ canvas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 1rem 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1rem 0.5rem;
 }
 
 .about__stack a img {
@@ -427,6 +437,7 @@ canvas {
     display: -ms-grid;
     display: grid;
     gap: 1rem;
+    margin-bottom: 8rem;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;

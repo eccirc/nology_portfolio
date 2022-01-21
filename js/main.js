@@ -43,7 +43,7 @@ window.onload = () => {
   //Navigation Menu
   const navButtons = document.getElementsByClassName("nav__link");
   //Having classes here seems to work best
-  const sections = [".header", ".project", ".about", ".contact"];
+  const sections = [".header__sub", ".project", ".about__image", ".contact"];
 
   //Check if a given element is in view
   const checkSelected = () => {
