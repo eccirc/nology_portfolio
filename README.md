@@ -4,8 +4,8 @@
 
 ## About this project
 
-The aim of this website is to proide a clear, reponsive web site to showcase my web projcts.
-Taking a design-first approach with wire-framing in figma, then built with **HTML**, **SCSS** and **Javascript**.
+The aim of this website is to provide a clear, reponsive web site to showcase my web/dev projcts.
+Taking a design-first approach with wire-framing in [figma](https://www.figma.com/file/1ZOT2ibmY9RSbWTX43jJBt/nology-testing?node-id=0%3A1), then built with **HTML**, **SCSS** and **Javascript**.
 
 ## Credits
 
@@ -32,7 +32,7 @@ Taking a design-first approach with wire-framing in figma, then built with **HTM
 
 ![mobile project page](./assets/nology_portfolio_mobile_2.png)
 
-### DEsktop
+### Desktop
 
 ![desktop landing page](./assets/nology_portfolio_desktop.png)
 
