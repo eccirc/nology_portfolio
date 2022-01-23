@@ -1,16 +1,24 @@
+@charset "UTF-8";
 /*
-_typography.scss
+www.freecodecamp.org: 
+    320px — 480px: Mobile devices.
+    481px — 768px: iPads, Tablets.
+    769px — 1024px: Small screens, laptops.
+    1025px — 1200px: Desktops, large screens.
+    1201px and more — Extra large screens, TV.
 
-For setting the fonts, colours and sizes of all document text
 */
 @import url("https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gudea:ital,wght@0,400;0,700;1,400&display=swap");
 * {
   font-family: "Sulphur Point", sans-serif;
 }
 
 h1,
 h2 {
+  font-family: "Gudea", sans-serif;
   color: #ff95c1;
+  font-weight: 300;
 }
 
 h3,
@@ -25,11 +33,11 @@ h1 {
   font-size: 3rem;
 }
 
-h3 {
+h2 {
   font-size: 2rem;
 }
 
-h2 {
+h3 {
   font-size: 1.5rem;
 }
 
@@ -42,14 +50,14 @@ span {
   font-size: 1.1rem;
 }
 
-@media screen and (min-width: 1800px) {
+@media screen and (min-width: 481px) {
   h1 {
-    font-size: 4rem;
-  }
-  h3 {
-    font-size: 3rem;
+    font-size: 5rem;
   }
   h2 {
+    font-size: 3rem;
+  }
+  h3 {
     font-size: 2.2rem;
   }
   a {
@@ -77,16 +85,16 @@ span {
   background-color: #27292c;
 }
 
-.nav #menu_icon {
-  width: 48px;
-  height: 48px;
-}
-
 .nav__button {
   background-color: transparent;
   border: none;
   margin: 20px;
   cursor: pointer;
+}
+
+.nav__button #menu_icon {
+  width: 48px;
+  height: 48px;
 }
 
 .nav__group {
@@ -105,7 +113,7 @@ span {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  top: 80px;
+  top: 70px;
   left: 0;
   height: 75vh;
   width: 99vw;
@@ -134,7 +142,7 @@ span {
   color: #ff95c1;
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 769px) {
   .nav__group {
     background-color: transparent;
     border: none;
@@ -164,6 +172,15 @@ span {
   }
 }
 
+.nav-selected {
+  background-color: #ff95c1;
+  color: #27292c;
+}
+
+.nav-selected:hover {
+  color: #b9c8d7;
+}
+
 .project {
   margin: 6rem 0;
   display: -webkit-box;
@@ -185,45 +202,39 @@ span {
 .project__title {
   color: #ff95c1;
   font-weight: normal;
+  margin: 1rem 0;
+}
+
+.project__title i {
+  color: #00c8c8;
 }
 
 .project__sub span {
-  border-bottom: 2px solid;
+  color: #ff95c1;
+  border-bottom: 1px solid;
 }
 
 .project__sub .icons__tech {
   padding: 1rem 0;
-  color: #ff95c1;
+}
+
+.project__sub .icons__tech img {
+  margin: 0 10px;
+  width: 38px;
+}
+
+@media screen and (min-width: 481px) {
+  .project__sub .icons__tech img {
+    width: 48px;
+  }
 }
 
 .project__info {
   color: #b2cce6;
+  margin-bottom: 2rem;
 }
 
-.project__icons {
-  margin: 1rem 1rem;
-  color: #ff95c1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.nav-selected {
-  background-color: #ff95c1;
-  color: #27292c;
-}
-
-.nav-selected:hover {
-  color: #b9c8d7;
-}
-
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 769px) {
   .nav {
     border-bottom: 2px solid #b9c8d7;
   }
@@ -253,25 +264,34 @@ span {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: title;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .project__title i {
+    margin-left: 20px;
   }
   .project__sub {
     -ms-grid-row: 2;
-    -ms-grid-column: 2;
+    -ms-grid-column: 1;
     grid-area: sub;
   }
   .project__info {
-    -ms-grid-row: 2;
+    -ms-grid-row: 3;
     -ms-grid-column: 1;
     grid-area: info;
   }
   .project:nth-child(even) {
-        grid-template-areas: "title img" "info img" "icons img";
+        grid-template-areas: "title img" "sub img" "info img";
   }
 }
 
-/* _base.scss
-  Describes global/ layout styles
-*/
 * {
   padding: 0;
   margin: 0;
@@ -281,34 +301,40 @@ img {
   border-radius: 5px;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   width: 100vw;
-  height: auto;
+  height: 100vh;
   background-color: #27292c;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   overflow-x: hidden;
+}
+
+canvas {
+  position: fixed !important;
 }
 
 .header {
   background-size: cover;
   height: 70vh;
-  width: 100%;
-  margin: auto;
-  padding: 8rem 2rem;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.header__title {
-  font-weight: 300;
-}
-
-.header__sub {
-  font-weight: 300;
 }
 
 .projects,
@@ -316,11 +342,11 @@ body {
 .contact {
   width: 90%;
   margin: auto;
-  padding-top: 4rem;
+  padding-top: 8rem;
 }
 
 .about {
-  height: 60vh;
+  height: auto;
   width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -338,16 +364,41 @@ body {
 }
 
 .about__image {
-  background-color: #b9c8d7;
+  z-index: -1;
   width: 80%;
-  height: 80%;
+  height: 50vh;
   -o-object-fit: cover;
      object-fit: cover;
   margin-bottom: 2rem;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.about__tech_title {
+  margin: 1rem 0;
+}
+
+.about__me a {
+  text-decoration: underline;
+}
+
+.about__stack {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1rem 0.5rem;
+}
+
+.about__stack a img {
+  width: 48px;
+  margin-right: 32px;
 }
 
 .contact {
-  height: 50vh;
+  height: auto;
+  margin-bottom: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -367,11 +418,13 @@ body {
   margin: 2rem;
 }
 
-.contact__icons {
-  color: #ff95c1;
+.contact__icons img {
+  margin: 0 20px;
+  width: 58px;
+  color: #00c8c8;
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 1025px) {
   .header {
     padding: 8rem 4rem;
     width: 50%;
@@ -384,6 +437,7 @@ body {
     display: -ms-grid;
     display: grid;
     gap: 1rem;
+    margin-bottom: 8rem;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -392,7 +446,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1201px) {
   .projects,
   .about,
   .contact {

@@ -1,12 +1,11 @@
-/*
-_typography.scss
-
-For setting the fonts, colours and sizes of all document text
-*/
+// _typography.scss - for setting the fonts, colours and sizes of all document text
 
 @import url("https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Gudea:ital,wght@0,400;0,700;1,400&display=swap");
+
 $theme-font-main: "Sulphur Point", sans-serif;
+$theme-font-heading: "Gudea", sans-serif;
 
 * {
   font-family: $theme-font-main;
@@ -14,7 +13,9 @@ $theme-font-main: "Sulphur Point", sans-serif;
 
 h1,
 h2 {
+  font-family: $theme-font-heading;
   color: $theme-pink;
+  font-weight: 300;
 }
 
 h3,
@@ -28,10 +29,10 @@ button {
 h1 {
   font-size: 3rem;
 }
-h3 {
+h2 {
   font-size: 2rem;
 }
-h2 {
+h3 {
   font-size: 1.5rem;
 }
 
@@ -44,15 +45,14 @@ span {
   font-size: 1.1rem;
 }
 
-//Biiig screens
-@media screen and (min-width: 1800px) {
+@media screen and (min-width: $screen-medium) {
   h1 {
-    font-size: 4rem;
-  }
-  h3 {
-    font-size: 3rem;
+    font-size: 5rem;
   }
   h2 {
+    font-size: 3rem;
+  }
+  h3 {
     font-size: 2.2rem;
   }
 
